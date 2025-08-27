@@ -18,7 +18,7 @@ public class PersonagemGame {
         this.saudeAtual = saudeAtual;
     }
 
-    public tomarDano(int quantidadeDeDano) {
+    public void tomarDano(int quantidadeDeDano) {
         this.saudeAtual = saudeAtual - quantidadeDeDano;
         if (this.saudeAtual < 0) {
             this.saudeAtual = 0;
