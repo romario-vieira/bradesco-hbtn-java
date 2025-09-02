@@ -1,6 +1,11 @@
 public class Gerente extends Empregado {
     private double comissao;
 
+    public Gerente(double salarioFixo) {
+        super(salarioFixo);
+        this.comissao = salarioFixo * 0.20;
+    }
+
     public double getComissao() {
         return comissao;
     }
