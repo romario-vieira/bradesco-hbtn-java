@@ -1,6 +1,10 @@
 public class Empregado {
     private double salarioFixo;
 
+    public Empregado(double salarioFixo) {
+        this.salarioFixo = salarioFixo;
+    }
+
     public double getSalarioFixo() {
         return salarioFixo;
     }
