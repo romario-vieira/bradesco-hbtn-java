@@ -3,18 +3,17 @@ public class Gerente extends Empregado {
 
     public Gerente(double salarioFixo) {
         super(salarioFixo);
-        this.comissao = salarioFixo * 0.20;
     }
 
-    public double getComissao() {
-        return comissao;
+    public double getComissao(Departamento departamento) {
+        double meta = departamento.getValorAtingidoMeta() - departamento.getValorMeta();
+        return comissao += meta * 0.01;
     }
 
     @Override
     public double calcularBonus(Departamento departamento) {
-        double bonusFixo = super.calcularBonus(departamento);
         if (departamento.alcancouMeta()) {
-            return bonusFixo + comissao;
+            return super.getSalarioFixo() * 0.20 + this.getComissao(departamento);
         }
         return 0;
     }
