@@ -1,10 +1,10 @@
 public class Mensagem {
     private String texto;
-    private TipoMensagem tipo;
+    private TipoMensagem tipoMensagem;
     
-    public Mensagem(String texto, TipoMensagem tipo) {
+    public Mensagem(String texto, TipoMensagem tipoMensagem) {
         this.setTexto(texto);
-        this.setTipo(tipo);
+        this.setTipoMensagem(tipoMensagem);
     }
 
     public String getTexto() {
@@ -15,12 +15,12 @@ public class Mensagem {
         this.texto = texto;
     }
 
-    public TipoMensagem getTipo() {
-        return tipo;
+    public TipoMensagem getTipoMensagem() {
+        return tipoMensagem;
     }
 
-    private void setTipo(TipoMensagem tipo) {
-        this.tipo = tipo;
+    private void setTipoMensagem(TipoMensagem tipoMensagem) {
+        this.tipoMensagem = tipoMensagem;
     }
 
     
