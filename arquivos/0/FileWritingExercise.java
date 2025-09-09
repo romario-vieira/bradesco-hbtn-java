@@ -21,18 +21,17 @@
             System.out.print("Digite o conteúdo a ser escrito no arquivo: ");
             String content = scanner.nextLine();
             if (content.equalsIgnoreCase("sair")) {
-                System.out.println("Encerrando o programa.");
                 break;
             }
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
                 writer.write(content);
                 writer.newLine();
-                System.out.println("Conteúdo escrito no arquivo com sucesso.");
             } catch (IOException e) {
                 System.out.println("Ocorreu um erro ao escrever no arquivo: " + e.getMessage());
             }
             
         }
+        System.out.println("Arquivo criado e conteúdo salvo com sucesso.");
 
          scanner.close();
      }
