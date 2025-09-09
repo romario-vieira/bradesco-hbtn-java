@@ -9,7 +9,7 @@ public class CsvFileReader {
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
-            System.out.println("Conteúdo do arquivo 'funcionarios.csv':\n");
+            
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 System.out.println("Funcionário: " + values[0] + "\n" + "Idade: " + values[1] + "\n" + "Departamento: " + values[2] + "\n" + "Salarial: " + values[3]);
