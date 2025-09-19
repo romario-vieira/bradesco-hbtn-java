@@ -24,7 +24,7 @@ public class GerenciamentoDeContatos {
         contato.adicionarTelefone(telefone);
         if (contato.adicionarEmail(email)) {
             contatos.put(nome, contato);
-            System.out.println("Contato adicionado: " + nome);
+            System.out.println("Contato " + nome + " adicionado com sucesso!");
         }
     }
 
