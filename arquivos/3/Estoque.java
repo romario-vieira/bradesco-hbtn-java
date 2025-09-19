@@ -25,8 +25,24 @@ public class Estoque {
     public void adicionarProduto(String nome, int quantidade, double preco) {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(getNomeArquivo(), true))) {
-            int id = (int) (Math.random() * 10000); // Gera um ID aleatório
-            String linha = id + "," + nome + "," + quantidade + "," + preco;
+            int novoId = 1;
+            // Descobre o maior ID existente
+            try (BufferedReader br = new BufferedReader(new FileReader(getNomeArquivo()))) {
+                String linha;
+                int maiorId = 0;
+                while ((linha = br.readLine()) != null) {
+                    String[] partes = linha.split(",");
+                    int idAtual = Integer.parseInt(partes[0]);
+                    if (idAtual > maiorId) {
+                        maiorId = idAtual;
+                    }
+                }
+                novoId = maiorId + 1;
+            } catch (IOException e) {
+                // Se o arquivo não existir ou estiver vazio, começa do 1
+                novoId = 1;
+            }
+            String linha = novoId + "," + nome + "," + quantidade + "," + preco;
             writer.write(linha);
             writer.newLine();
         } catch (Exception e) {
