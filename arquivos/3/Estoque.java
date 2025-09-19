@@ -79,7 +79,8 @@ public class Estoque {
             BufferedReader br = new BufferedReader(new java.io.FileReader(this.getNomeArquivo()));
             String linha;
             while ((linha = br.readLine()) != null) {
-                System.out.println(linha);
+                String[] partes = linha.split(",");
+                System.out.println( "ID: " + partes[0] + ", Nome: " + partes[1] + ", Quantidade: " + partes[2] + ", Preço: " + partes[3] );
             }
         } catch (Exception e) {
             e.printStackTrace();
