@@ -80,7 +80,7 @@ public class Estoque {
             String linha;
             while ((linha = br.readLine()) != null) {
                 String[] partes = linha.split(",");
-                System.out.println( "ID: " + partes[0] + ", Nome: " + partes[1] + ", Quantidade: " + partes[2] + ", Preço: " + partes[3] );
+                System.out.println( "ID: " + partes[0] + ", Nome: " + partes[1] + ", Quantidade: " + partes[2] + ", Preço: " + Double.valueOf(partes[3]) );
             }
         } catch (Exception e) {
             e.printStackTrace();
