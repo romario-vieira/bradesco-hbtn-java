@@ -9,7 +9,7 @@ public class Eletronico {
 
     @Override
     public String toString() {
-        return "[" + descricao + "] " 
+        return "[" + descricao + "]" 
         + " R$ " 
         + String.format("%.6f", valor);
     }
