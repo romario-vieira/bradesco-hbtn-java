@@ -1,9 +1,9 @@
 public class Comida {
     private String nome;
-    private int calorias;
+    private double calorias;
     private double preco;
 
-    public Comida(String nome, int calorias, double preco) {
+    public Comida(String nome, double calorias, double preco) {
         this.nome = nome;
         this.calorias = calorias;
         this.preco = preco;
@@ -11,6 +11,9 @@ public class Comida {
 
     @Override
     public String toString() {
-        return "[" + nome + "] " + calorias + " R$ " + preco;
+        return "[" + nome + "] " 
+        + String.format("%.6f", calorias) 
+        + " R$ " 
+        + String.format("%.6f", preco);
     }
 }
