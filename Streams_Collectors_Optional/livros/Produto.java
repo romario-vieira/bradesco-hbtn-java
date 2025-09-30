@@ -47,6 +47,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "[" + codigo + "] " + nome + " " + categoria + " R$ " + String.format(Locale.of("pt", "BR") ,"%.2f", preco);
+        return "[" + codigo + "] " + nome + " " + categoria + " R$ " + String.format(new Locale("pt", "BR") ,"%.2f", preco);
     }
 }
