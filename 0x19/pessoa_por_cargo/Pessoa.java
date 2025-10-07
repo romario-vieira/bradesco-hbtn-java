@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Pessoa {
     private int codigo;
     private String nome;
@@ -55,7 +57,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ " + String.format("%.6f", salario);
+        return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ " + String.format(new Locale("pt", "BR"),"%.6f", salario);
     }
     
 }
